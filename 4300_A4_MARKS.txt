@@ -1,0 +1,65 @@
+-------------------------------------------------------------------------
+Computer Science 4300
+Assignment 4
+
+Student(s): 
+
+For this assignment, marking will work a little differently
+The marks on the right do not add up to 100%, however instead
+you will lose the given amount of marks if the feature is
+not implemented properly. This means that instead of starting
+with 0% and gaining marks, you are essentially starting the
+assignment with 100% and losing marks based on things which
+are not finished.
+
+Code Style / Modularity / Readability                          5
+
+    - Code has consistent indenting
+    - Functions used where appropriate
+    - Student comments where explanation necessary
+
+Drawing / Animations                                               
+
+    - All entities properly read from level file and drawn    10
+      entities are drawn in the correct rooms
+      entities are drawn in the centre of their tile
+    - Player animations set properly based on state           10
+      Run animation doesn't play when just left/right
+      or up/down both held
+    - Sword animation appears in correct place and direction  10
+      sword animation moves with player, has proper lifespan
+      explosions have no collision box
+    
+Game Play Functionality                                            
+    
+
+    - Player moves properly when correct keys pressed         10
+      CInput flags used 'properly' within input system
+      Player can only attack when previous attack has ended
+      Player config settings used properly
+    - Player and NPCs collide with tiles that block movement  10
+      Player respawns after touching NPC
+      Sword destroys NPCs on collision
+    - Camera mode switching works correctly                   15
+      follow mode follows link everywhere
+      room mode works in all rooms (including "off the map")
+    - NPC Patrol AI works correctly                           15
+      Patrol positions followed in order (looping)
+      No oscillation around destination
+    - NPC Follow AI works correctly                           15
+      NPC moves directly towards player if line of sight
+      not blocked. Only vision blocking tiles and NPCs block
+      line of sight. NPC moves directly toward home if there
+      is not line of sight to player
+    - Music & Sounds work properly                            10
+    - Damage / hit points work properly                       10
+    - Heart pickup works properly                              5
+    - Teleporting black tiles work properly                    5
+    - Pause functionality correctly implemented                5
+    - Custom Level file included (at least two rooms)         10
+
+Bonus Marks
+
+    - Up to 10% bonus for cool additional functionality
+            
+Assignment Mark                                               100/100
