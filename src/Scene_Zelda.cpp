@@ -84,6 +84,7 @@ void Scene_Zelda::loadLevel(const std::string& filename)
 
 		else if ( firstWord == "NPC" )
 		{
+            std::vector<Vec2> potrol_Positions;
             iss >> animName >> roomX >> roomY >> posX >> posY >> blockMove >> blockVis>>
                 maxHealth>>damage>>behaviourName>>patrolSpeed;
             //  Calculate the entity's center point
@@ -112,8 +113,9 @@ void Scene_Zelda::loadLevel(const std::string& filename)
                     //  Store the patrol positions
                     iss>>patrolPosX>>patrolPosY;
                     Vec2 patrolPos = getPosition ( roomX, roomY, patrolPosX, patrolPosY);
-                    e->addComponent<CPatrol>(patrolPos, patrolSpeed);
+                    potrol_Positions.push_back(patrolPos);
                 }
+                e->addComponent<CPatrol>(potrol_Positions, patrolSpeed);
             }
 		}
 		else
